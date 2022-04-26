@@ -1,4 +1,7 @@
 function [rf,vf] = kepler_prediction_problem(mu_e,t1,a,e,i,o,w,v)
+%This code will take inputs of the gravitation parameter, time of flight and orbital elements
+%The output will be the position and velocity vectors at the final position
+
 %Establish r and v in the PQW plane, rotate them to XYZ
 p = a*(1-e^2);
 r = p/(1+ e*cosd(v));
