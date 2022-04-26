@@ -1,4 +1,7 @@
 function [v0,vf] = lambert(ro,rf,T,DM,mu)
+%This code will take inputs of the initial and final position vectors, the time of flight, 
+%direction of motion and the gravitational parameter. The output will be the two velocity vectors
+
 dV = acos(dot(ro,rf)/(norm(ro)*norm(rf)));
 A = DM*sqrt(norm(ro)*norm(rf)*(1+cos(dV)));
 if dV==0 || A==0
