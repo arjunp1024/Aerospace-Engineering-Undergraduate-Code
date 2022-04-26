@@ -1,4 +1,6 @@
 function [v1,v2,v3] = gibbs(r1,r2,r3,mu)
+%This code will take inputs of three separate position vectors and the gravitational 
+%parameter of the central body and output the velocities at each of these three locations
 D = cross(r2,r3)+cross(r3,r1)+cross(r1,r2);
 N = norm(r1)*cross(r2,r3)+ norm(r2)*cross(r3,r1) + norm(r3)*cross(r1,r2);
 p = norm(N)/norm(D);
