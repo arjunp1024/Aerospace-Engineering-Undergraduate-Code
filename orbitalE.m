@@ -1,4 +1,6 @@
 function [OrbitalElements] = orbitalE(length,mu,vec);
+%With inputs of the gravitational parameter, a vector containing position and velocity vectors, and the length of said vector
+%This code will output the orbital elements as well as plot their osculations over time
 n = 1;
 while n < length+1
 OrbitalElements(n,1) = -mu/(2*(.5*((norm(vec(n,4:6)))^2) -mu/norm(vec(n,1:3))));
